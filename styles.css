@@ -1,4 +1,7 @@
 body {
- background-image: url(bg.jpg);
- background-color: #cccccc;
+  border: 2px solid black;
+  padding: 25px;
+  background: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
