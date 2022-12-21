@@ -1,8 +1,8 @@
 body {
   background-image: url(bg.jpg);
   background-color: #cccccc;
-  width: 800px;
-  height: 600px;
+  width: 800;
+  height: 600;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
