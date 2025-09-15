@@ -1,617 +1,522 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashish David - AI/NLP Researcher</title>
-    <meta name="description" content="PhD Researcher in Computer Science | Missouri University of Science and Technology">
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        academic: {
-                            blue: '#1a365d',
-                            gold: '#d4af37',
-                            dark: '#2d3748',
-                            light: '#f7fafc'
-                        }
-                    },
-                    fontFamily: {
-                        serif: ['Georgia', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['Courier New', 'monospace']
-                    }
-                }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Ashish David - AI/NLP Researcher</title>
+  <meta name="description" content="AI/NLP Researcher & Ph.D. Candidate at Missouri S&T. Large Language Models, Information Retrieval, and Human-Centered AI." />
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="/static/ashish-david-headshot-800.webp" imagesrcset="/static/ashish-david-headshot-800.webp" />
+
+  <!-- OpenGraph/Twitter -->
+  <meta property="og:title" content="Ashish David - AI/NLP Researcher" />
+  <meta property="og:description" content="Ph.D. Candidate at Missouri S&T working on LLMs, IR, and Human-Centered AI." />
+  <meta property="og:image" content="/static/ashish-david-headshot-800.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ashish David - AI/NLP Researcher" />
+  <meta name="twitter:description" content="LLMs • IR • Accessibility" />
+  <meta name="twitter:image" content="/static/ashish-david-headshot-800.jpg" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            academic: {
+              blue: '#1a365d',
+              gold: '#d4af37',
+              dark: '#2d3748',
+              light: '#f7fafc'
             }
+          },
+          fontFamily: {
+            serif: ['Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Courier New', 'monospace']
+          }
         }
-    </script>
-    
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    
-    <!-- Animation Libraries -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    
-    <style>
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        .vanta-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            opacity: 0.4;
-        }
-        .section {
-            scroll-margin-top: 100px;
-        }
-        .publication-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .gradient-text {
-            background: linear-gradient(90deg, #1a365d 0%, #d4af37 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-    </style>
+      }
+    }
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.2/dist/feather.min.js"></script>
+
+  <!-- Animation Libraries -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    .floating { animation: float 6s ease-in-out infinite; }
+    .vanta-bg { position: fixed; inset: 0; z-index: -1; opacity: 0.4; }
+    .section { scroll-margin-top: 100px; }
+    .publication-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #1a365d 0%, #d4af37 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
 </head>
 <body class="bg-academic-light font-sans text-academic-dark">
-    <!-- Background Animation -->
-    <div id="vanta-bg"></div>
-    
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="#" class="text-xl font-bold gradient-text">Ashish David</a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-academic-blue hover:text-academic-gold transition">About</a>
-                    <a href="#research" class="text-academic-blue hover:text-academic-gold transition">Research</a>
-                    <a href="#publications" class="text-academic-blue hover:text-academic-gold transition">Publications</a>
-                    <a href="#teaching" class="text-academic-blue hover:text-academic-gold transition">Teaching</a>
-                    <a href="#contact" class="text-academic-blue hover:text-academic-gold transition">Contact</a>
-                    <a href="/cv.pdf" download class="px-4 py-2 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition">Download CV</a>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="menu-btn" class="text-academic-blue">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
-            <div class="flex flex-col space-y-4">
-                <a href="#about" class="text-academic-blue hover:text-academic-gold transition">About</a>
-                <a href="#research" class="text-academic-blue hover:text-academic-gold transition">Research</a>
-                <a href="#publications" class="text-academic-blue hover:text-academic-gold transition">Publications</a>
-                <a href="#teaching" class="text-academic-blue hover:text-academic-gold transition">Teaching</a>
-                <a href="#contact" class="text-academic-blue hover:text-academic-gold transition">Contact</a>
-                <a href="/cv.pdf" download class="px-4 py-2 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition text-center">Download CV</a>
-            </div>
-        </div>
-    </nav>
+  <!-- Background Animation -->
+  <div id="vanta-bg" class="vanta-bg"></div>
 
-    <!-- Hero Section -->
-    <header class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2" data-aos="fade-right">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Hi, I'm <span class="gradient-text">Ashish David</span></h1>
-                <h2 class="text-2xl md:text-3xl font-semibold text-academic-blue mb-6">PhD Researcher in <span class="text-academic-gold">Computer Science</span></h2>
-                <p class="text-lg mb-8 text-gray-600 leading-relaxed">
-                    Researching Large Language Models, Information Retrieval, and Data Science at Missouri University of Science and Technology. Passionate about AI/NLP research and real-world applications.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#contact" class="px-6 py-3 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition">Get in Touch</a>
-                    <a href="#research" class="px-6 py-3 border border-academic-blue text-academic-blue rounded-md hover:bg-academic-blue hover:text-white transition">Learn More</a>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
-                <div class="relative">
-                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-academic-gold shadow-xl floating">
-                        <img src="http://static.photos/people/640x360/123" alt="Ashish David" class="w-full h-full object-cover">
-                    </div>
-                    <div class="absolute -bottom-4 -right-4 bg-academic-blue text-white px-4 py-2 rounded-md shadow-lg">
-                        <span class="font-bold">PhD Candidate</span>
-                    </div>
-                </div>
-            </div>
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="#" class="text-xl font-bold gradient-text">Ashish David</a>
         </div>
-    </header>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="text-academic-blue hover:text-academic-gold transition">About</a>
+          <a href="#research" class="text-academic-blue hover:text-academic-gold transition">Research</a>
+          <a href="#publications" class="text-academic-blue hover:text-academic-gold transition">Publications</a>
+          <a href="#teaching" class="text-academic-blue hover:text-academic-gold transition">Teaching</a>
+          <a href="#contact" class="text-academic-blue hover:text-academic-gold transition">Contact</a>
+          <a href="/cv.pdf" download class="px-4 py-2 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition">Download CV</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-academic-blue" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+      <div class="flex flex-col space-y-4">
+        <a href="#about" class="text-academic-blue hover:text-academic-gold transition">About</a>
+        <a href="#research" class="text-academic-blue hover:text-academic-gold transition">Research</a>
+        <a href="#publications" class="text-academic-blue hover:text-academic-gold transition">Publications</a>
+        <a href="#teaching" class="text-academic-blue hover:text-academic-gold transition">Teaching</a>
+        <a href="#contact" class="text-academic-blue hover:text-academic-gold transition">Contact</a>
+        <a href="/cv.pdf" download class="px-4 py-2 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition text-center">Download CV</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white rounded-xl shadow-md section">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-academic-blue mb-4">About Me</h2>
-            <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
+  <!-- Hero -->
+  <header class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2" data-aos="fade-right">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Hi, I'm <span class="gradient-text">Ashish David</span></h1>
+        <h2 class="text-2xl md:text-3xl font-semibold text-academic-blue mb-6">Ph.D. Candidate, <span class="text-academic-gold">Computer Science</span></h2>
+        <p class="text-lg mb-8 text-gray-600 leading-relaxed">
+          AI/NLP researcher at Missouri University of Science and Technology. I work on Large Language Models, Information Retrieval, and Human-Centered AI with a focus on accessibility and real-world impact.
+        </p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#contact" class="px-6 py-3 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition">Get in Touch</a>
+          <a href="#research" class="px-6 py-3 border border-academic-blue text-academic-blue rounded-md hover:bg-academic-blue hover:text-white transition">Learn More</a>
         </div>
-        <div class="flex flex-col md:flex-row gap-8">
-            <div class="md:w-1/3" data-aos="fade-right">
-                <div class="bg-academic-light p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-academic-blue mb-4">Education</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="font-medium">PhD in Computer Science</h4>
-                            <p class="text-gray-600">Missouri University of Science and Technology | 2024 - Present</p>
-                            <p class="text-sm mt-1">Advisor: Dr. Shubham Chatterjee</p>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">BSc in Applied Mathematics and Computer Science</h4>
-                            <p class="text-gray-600">Moscow Institute of Physics and Technology | 2019 - 2023</p>
-                            <p class="text-sm mt-1">Awarded Russian Government Scholarship</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-6 bg-academic-light p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-semibold text-academic-blue mb-4">Skills</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <h4 class="font-medium">Technical</h4>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">Python</span>
-                                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">C++</span>
-                                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">LLMs/NLP</span>
-                                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">Information Retrieval</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">Research</h4>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">HPC/MPI</span>
-                                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">Parallel Computing</span>
-                                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">Distributed Systems</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="md:w-2/3" data-aos="fade-left">
-                <h3 class="text-2xl font-semibold text-academic-blue mb-6">Biography</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">
-                    I am a PhD candidate in Computer Science at Missouri University of Science and Technology, working under the supervision of Dr. Shubham Chatterjee. My research focuses on Large Language Models, Information Retrieval, and Data Science. My work bridges AI/NLP and information systems to address real-world problems.
-                </p>
-                <p class="text-gray-600 leading-relaxed mb-6">
-                    Prior to joining Missouri S&T, I completed my Bachelor's degree in Applied Mathematics and Computer Science at Moscow Institute of Physics and Technology, where I worked on HPC/MPI applications. My academic journey has been driven by my passion for artificial intelligence and high-performance computing.
-                </p>
-                <h3 class="text-2xl font-semibold text-academic-blue mb-6">Research Interests</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-academic-light p-4 rounded-lg shadow-sm border-l-4 border-academic-gold">
-                        <h4 class="font-medium text-academic-blue mb-2">Large Language Models</h4>
-                        <p class="text-gray-600 text-sm">Architecture, training, and applications of transformer-based models</p>
-                    </div>
-                    <div class="bg-academic-light p-4 rounded-lg shadow-sm border-l-4 border-academic-gold">
-                        <h4 class="font-medium text-academic-blue mb-2">Information Retrieval</h4>
-                        <p class="text-gray-600 text-sm">Neural ranking models and query understanding</p>
-                    </div>
-                    <div class="bg-academic-light p-4 rounded-lg shadow-sm border-l-4 border-academic-gold">
-                        <h4 class="font-medium text-academic-blue mb-2">High Performance Computing</h4>
-                        <p class="text-gray-600 text-sm">MPI, parallel computing, and distributed systems</p>
-                    </div>
-                    <div class="bg-academic-light p-4 rounded-lg shadow-sm border-l-4 border-academic-gold">
-                        <h4 class="font-medium text-academic-blue mb-2">AI Applications</h4>
-                        <p class="text-gray-600 text-sm">Practical implementations of AI for real-world problems</p>
-                    </div>
-                </div>
-            </div>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="https://github.com/ashishdavid" target="_blank" rel="noopener" class="inline-flex items-center text-academic-blue hover:text-academic-gold"><i data-feather="github" class="mr-2"></i>GitHub</a>
+          <span class="text-gray-400">•</span>
+          <a href="https://www.linkedin.com/in/ashish-david/" target="_blank" rel="noopener" class="inline-flex items-center text-academic-blue hover:text-academic-gold"><i data-feather="linkedin" class="mr-2"></i>LinkedIn</a>
+          <span class="text-gray-400">•</span>
+          <a href="https://scholar.google.com/citations?user=MafxQ7kAAAAJ&hl=en" target="_blank" rel="noopener" class="inline-flex items-center text-academic-blue hover:text-academic-gold"><i data-feather="book" class="mr-2"></i>Google Scholar</a>
         </div>
-    </section>
+      </div>
 
-    <!-- Research Section -->
-    <section id="research" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto section">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-academic-blue mb-4">Research</h2>
-            <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
+      <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+        <div class="relative">
+          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-academic-gold shadow-xl floating">
+            <picture>
+              <source srcset="/static/ashish-david-headshot-800.webp" type="image/webp" />
+              <img src="/static/ashish-david-headshot-800.jpg" alt="Ashish David" width="800" height="800" loading="eager" class="w-full h-full object-cover" />
+            </picture>
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-academic-blue text-white px-4 py-2 rounded-md shadow-lg">
+            <span class="font-bold">Ph.D. Candidate</span>
+          </div>
         </div>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
-                <div class="text-academic-gold mb-4">
-                    <i data-feather="book" class="w-12 h-12"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-academic-blue mb-4">Dissertation</h3>
-                <p class="text-gray-600 mb-4">
-                    <span class="font-medium">Title:</span> "[Your Dissertation Title]"
-                </p>
-                <p class="text-gray-600">
-                    [Brief summary of your dissertation research, including key questions, methods, and expected contributions (2-3 paragraphs).]
-                </p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
-                <div class="text-academic-gold mb-4">
-                    <i data-feather="bar-chart-2" class="w-12 h-12"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-academic-blue mb-4">Current Projects</h3>
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="font-medium text-academic-blue">[Project 1 Title]</h4>
-                        <p class="text-gray-600 text-sm">[Brief description of the project, collaborators, and your role]</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-academic-blue">[Project 2 Title]</h4>
-                        <p class="text-gray-600 text-sm">[Brief description of the project, collaborators, and your role]</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
-                <div class="text-academic-gold mb-4">
-                    <i data-feather="award" class="w-12 h-12"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-academic-blue mb-4">Grants & Awards</h3>
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="font-medium text-academic-blue">[Award/Grant Name]</h4>
-                        <p class="text-gray-600 text-sm">[Organization] | [Year]</p>
-                        <p class="text-gray-600 text-sm">[Brief description of the award/grant]</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-academic-blue">[Award/Grant Name]</h4>
-                        <p class="text-gray-600 text-sm">[Organization] | [Year]</p>
-                        <p class="text-gray-600 text-sm">[Brief description of the award/grant]</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
-                <div class="text-academic-gold mb-4">
-                    <i data-feather="users" class="w-12 h-12"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-academic-blue mb-4">Collaborations</h3>
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="font-medium text-academic-blue">[Collaborator Name]</h4>
-                        <p class="text-gray-600 text-sm">[Institution]</p>
-                        <p class="text-gray-600 text-sm">[Nature of collaboration]</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-academic-blue">[Lab/Group Name]</h4>
-                        <p class="text-gray-600 text-sm">[Institution]</p>
-                        <p class="text-gray-600 text-sm">[Your role in the collaboration]</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </header>
 
-    <!-- Publications Section -->
-    <section id="publications" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white rounded-xl shadow-md section">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-academic-blue mb-4">Publications</h2>
-            <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
-        </div>
-        
-        <div class="mb-8">
-            <h3 class="text-2xl font-semibold text-academic-blue mb-6">Journal Articles</h3>
-            <div class="space-y-6">
-                <div class="publication-card p-6 border border-gray-200 rounded-lg transition duration-300 hover:shadow-lg" data-aos="fade-up">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h4 class="font-medium text-lg text-academic-blue">[Article Title]</h4>
-                            <p class="text-gray-600 mb-2">[Authors], <span class="italic">[Journal Name]</span>, [Year]</p>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <a href="#" class="text-sm text-academic-gold hover:underline">PDF</a>
-                                <a href="#" class="text-sm text-academic-gold hover:underline">DOI</a>
-                                <a href="#" class="text-sm text-academic-gold hover:underline">BibTeX</a>
-                            </div>
-                        </div>
-                        <span class="px-3 py-1 bg-academic-blue text-white rounded-full text-xs shadow-sm">Published</span>
-                    </div>
-                </div>
-                <div class="publication-card p-6 border border-gray-200 rounded-lg transition duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h4 class="font-medium text-lg text-academic-blue">[Article Title]</h4>
-                            <p class="text-gray-600 mb-2">[Authors], <span class="italic">[Journal Name]</span>, [Year]</p>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <a href="#" class="text-sm text-academic-gold hover:underline">PDF</a>
-                                <a href="#" class="text-sm text-academic-gold hover:underline">DOI</a>
-                                <a href="#" class="text-sm text-academic-gold hover:underline">BibTeX</a>
-                            </div>
-                        </div>
-                        <span class="px-3 py-1 bg-academic-blue text-white rounded-full text-xs shadow-sm">Published</span>
-                    </div>
-                </div>
+  <!-- About -->
+  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white rounded-xl shadow-md section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-academic-blue mb-4">About Me</h2>
+      <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
+    </div>
+    <div class="flex flex-col md:flex-row gap-8">
+      <div class="md:w-1/3" data-aos="fade-right">
+        <div class="bg-academic-light p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl font-semibold text-academic-blue mb-4">Education</h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-medium">Ph.D. in Computer Science</h4>
+              <p class="text-gray-600">Missouri University of Science and Technology · Aug 2024 – Present</p>
+              <p class="text-sm mt-1">Advisor: Dr. Shubham Chatterjee • Fully funded</p>
+              <p class="text-sm text-gray-600 mt-1">Coursework: Algorithms, Computational Bayesian Analysis, Information Retrieval, Intro to AI</p>
             </div>
-        </div>
-        
-        <div class="mb-8">
-            <h3 class="text-2xl font-semibold text-academic-blue mb-6">Conference Papers</h3>
-            <div class="space-y-6">
-                <div class="publication-card p-6 border border-gray-200 rounded-lg transition duration-300 hover:shadow-lg" data-aos="fade-up">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h4 class="font-medium text-lg text-academic-blue">[Paper Title]</h4>
-                            <p class="text-gray-600 mb-2">[Authors], <span class="italic">[Conference Name]</span>, [Year]</p>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <a href="#" class="text-sm text-academic-gold hover:underline">PDF</a>
-                                <a href="#" class="text-sm text-academic-gold hover:underline">Slides</a>
-                                <a href="#" class="text-sm text-academic-gold hover:underline">Poster</a>
-                            </div>
-                        </div>
-                        <span class="px-3 py-1 bg-academic-blue text-white rounded-full text-xs shadow-sm">Presented</span>
-                    </div>
-                </div>
+            <div>
+              <h4 class="font-medium">B.S. in Applied Mathematics & Computer Science</h4>
+              <p class="text-gray-600">Moscow Institute of Physics and Technology · Oct 2019 – Jul 2023</p>
+              <p class="text-sm mt-1">Russian Government Scholarship (merit-based)</p>
+              <p class="text-sm text-gray-600 mt-1">Thesis: Optimizing MPI benchmarking app I/O with parallel NetCDF</p>
             </div>
+          </div>
         </div>
-        
-        <div class="mb-8">
-            <h3 class="text-2xl font-semibold text-academic-blue mb-6">Preprints & Working Papers</h3>
-            <div class="space-y-6">
-                <div class="publication-card p-6 border border-gray-200 rounded-lg transition duration-300 hover:shadow-lg" data-aos="fade-up">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h4 class="font-medium text-lg text-academic-blue">[Paper Title]</h4>
-                            <p class="text-gray-600 mb-2">[Authors], <span class="italic">[Repository]</span>, [Year]</p>
-                            <div class="flex flex-wrap gap-2 mt-2">
-                                <a href="#" class="text-sm text-academic-gold hover:underline">PDF</a>
-                                <a href="#" class="text-sm text-academic-gold hover:underline">arXiv</a>
-                                <a href="#" class="text-sm text-academic-gold hover:underline">Code</a>
-                            </div>
-                        </div>
-                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs shadow-sm">Preprint</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center mt-12">
-            <a href="#" class="px-6 py-3 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition inline-flex items-center">
-                <i data-feather="external-link" class="mr-2"></i> View Full Publication List
-            </a>
-        </div>
-    </section>
 
-    <!-- Teaching Section -->
-    <section id="teaching" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto section">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-academic-blue mb-4">Teaching</h2>
-            <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
-                <h3 class="text-2xl font-semibold text-academic-blue mb-6">Instructor</h3>
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="font-medium text-lg text-academic-blue">[Course Code]: [Course Title]</h4>
-                        <p class="text-gray-600 mb-2">[Semester, Year], [Your University]</p>
-                        <p class="text-gray-600 text-sm">[Brief description of your role, course content, and innovations]</p>
-                    </div>
-                </div>
+        <div class="mt-6 bg-academic-light p-6 rounded-lg shadow-sm">
+          <h3 class="text-xl font-semibold text-academic-blue mb-4">Skills</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-medium">Programming</h4>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">Python</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">C/C++</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">SQL</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">Bash</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">Java</span>
+              </div>
             </div>
-            
-            <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-2xl font-semibold text-academic-blue mb-6">Teaching Assistant</h3>
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="font-medium text-lg text-academic-blue">[Course Code]: [Course Title]</h4>
-                        <p class="text-gray-600 mb-2">[Semester, Year], [Your University]</p>
-                        <p class="text-gray-600 text-sm">[Brief description of your responsibilities and contributions]</p>
-                    </div>
-                    <div>
-                        <h4 class="font-medium text-lg text-academic-blue">[Course Code]: [Course Title]</h4>
-                        <p class="text-gray-600 mb-2">[Semester, Year], [Your University]</p>
-                        <p class="text-gray-600 text-sm">[Brief description of your responsibilities and contributions]</p>
-                    </div>
-                </div>
+            <div>
+              <h4 class="font-medium">Frameworks & Tools</h4>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">PyTorch</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">TensorFlow</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">MPI/OpenMP</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">Docker/Kubernetes</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">Spark/Hadoop</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">AWS</span>
+                <span class="px-3 py-1 bg-white text-academic-blue rounded-full text-sm shadow-sm">LaTeX</span>
+              </div>
             </div>
+          </div>
         </div>
-        
-        <div class="mt-12 bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
-            <h3 class="text-2xl font-semibold text-academic-blue mb-6">Teaching Philosophy</h3>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-4 bg-academic-light rounded-lg">
-                    <div class="text-academic-gold mb-2">
-                        <i data-feather="book-open" class="w-8 h-8"></i>
-                    </div>
-                    <h4 class="font-medium text-academic-blue mb-2">Engagement</h4>
-                    <p class="text-gray-600 text-sm">[Your approach to engaging students in the learning process]</p>
-                </div>
-                <div class="p-4 bg-academic-light rounded-lg">
-                    <div class="text-academic-gold mb-2">
-                        <i data-feather="help-circle" class="w-8 h-8"></i>
-                    </div>
-                    <h4 class="font-medium text-academic-blue mb-2">Critical Thinking</h4>
-                    <p class="text-gray-600 text-sm">[How you foster critical thinking and problem-solving skills]</p>
-                </div>
-                <div class="p-4 bg-academic-light rounded-lg">
-                    <div class="text-academic-gold mb-2">
-                        <i data-feather="trending-up" class="w-8 h-8"></i>
-                    </div>
-                    <h4 class="font-medium text-academic-blue mb-2">Application</h4>
-                    <p class="text-gray-600 text-sm">[Your emphasis on real-world applications of course material]</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white rounded-xl shadow-md section">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-academic-blue mb-4">Contact</h2>
-            <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
-        </div>
-        
-        <div class="flex flex-col md:flex-row gap-12">
-            <div class="md:w-1/2" data-aos="fade-right">
-                <h3 class="text-2xl font-semibold text-academic-blue mb-6">Get in Touch</h3>
-                <p class="text-gray-600 mb-8">
-                    I'm always interested in discussing research collaborations, speaking opportunities, or answering questions about my work. Feel free to reach out via email or connect with me on social media.
-                </p>
-                
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="text-academic-gold mr-4 mt-1">
-                            <i data-feather="mail"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-academic-blue">Email</h4>
-                            <a href="mailto:your.email@example.com" class="text-gray-600 hover:text-academic-gold transition">your.email@example.com</a>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="text-academic-gold mr-4 mt-1">
-                            <i data-feather="map-pin"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-academic-blue">Office</h4>
-                            <p class="text-gray-600">[Your Office Number], [Building Name]<br>[Your University]<br>[City, State ZIP Code]</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="text-academic-gold mr-4 mt-1">
-                            <i data-feather="clock"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium text-academic-blue">Office Hours</h4>
-                            <p class="text-gray-600">[Days] [Time] or by appointment</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="mt-8">
-                    <h4 class="font-medium text-academic-blue mb-4">Connect</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition">
-                            <i data-feather="github"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition">
-                            <i data-feather="linkedin"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition">
-                            <i data-feather="twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition">
-                            <i data-feather="youtube"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition">
-                            <i data-feather="book"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="md:w-1/2" data-aos="fade-left">
-                <h3 class="text-2xl font-semibold text-academic-blue mb-6">Send a Message</h3>
-                <form class="space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue">
-                    </div>
-                    <div>
-                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                        <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="px-6 py-3 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition w-full">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+      <div class="md:w-2/3" data-aos="fade-left">
+        <h3 class="text-2xl font-semibold text-academic-blue mb-6">Biography</h3>
+        <p class="text-gray-600 leading-relaxed mb-6">
+          I build LLM-driven retrieval and reasoning systems and evaluate them with rigorous, human-centered metrics. My background spans distributed systems and HPC; I like turning research into tools that people can actually use.
+        </p>
 
-    <!-- Footer -->
-    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-academic-blue text-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-xl font-bold">[Your Name]</h3>
-                    <p class="mt-2 text-academic-light">PhD Researcher in [Your Field]</p>
-                </div>
-                <div class="flex flex-col items-center md:items-end">
-                    <div class="flex space-x-6 mb-4">
-                        <a href="#" class="text-academic-light hover:text-academic-gold transition">
-                            <i data-feather="github"></i>
-                        </a>
-                        <a href="#" class="text-academic-light hover:text-academic-gold transition">
-                            <i data-feather="linkedin"></i>
-                        </a>
-                        <a href="#" class="text-academic-light hover:text-academic-gold transition">
-                            <i data-feather="twitter"></i>
-                        </a>
-                        <a href="#" class="text-academic-light hover:text-academic-gold transition">
-                            <i data-feather="mail"></i>
-                        </a>
-                    </div>
-                    <p class="text-sm text-academic-light text-center md:text-right">
-                        © <span id="year"></span> [Your Name]. All rights reserved.
-                    </p>
-                </div>
-            </div>
+        <h3 class="text-2xl font-semibold text-academic-blue mb-6">Research Interests</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-academic-light p-4 rounded-lg shadow-sm border-l-4 border-academic-gold">
+            <h4 class="font-medium text-academic-blue mb-2">Large Language Models</h4>
+            <p class="text-gray-600 text-sm">Prompting, controllability, reasoning, safety</p>
+          </div>
+          <div class="bg-academic-light p-4 rounded-lg shadow-sm border-l-4 border-academic-gold">
+            <h4 class="font-medium text-academic-blue mb-2">Information Retrieval</h4>
+            <p class="text-gray-600 text-sm">Neural ranking, rewriting, evaluation</p>
+          </div>
+          <div class="bg-academic-light p-4 rounded-lg shadow-sm border-l-4 border-academic-gold">
+            <h4 class="font-medium text-academic-blue mb-2">Human-Centered AI</h4>
+            <p class="text-gray-600 text-sm">Accessibility, readability, AI for Good</p>
+          </div>
+          <div class="bg-academic-light p-4 rounded-lg shadow-sm border-l-4 border-academic-gold">
+            <h4 class="font-medium text-academic-blue mb-2">High-Performance Computing</h4>
+            <p class="text-gray-600 text-sm">Parallel I/O, MPI, scalable evaluation</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Initialize animations
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        
-        // Initialize Vanta.js background
-        VANTA.NET({
-            el: "#vanta-bg",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x1a365d,
-            backgroundColor: 0xf7fafc,
-            points: 12.00,
-            maxDistance: 22.00,
-            spacing: 18.00
-        });
-        
-        // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-            
-            // Change icon based on menu state
-            if (menu.classList.contains('hidden')) {
-                feather.replace();
-            } else {
-                document.getElementById('menu-btn').innerHTML = feather.icons['x'].toSvg();
-            }
-        });
-        
-        // Update copyright year
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Replace all feather icons
-        feather.replace();
-    </script>
+  <!-- Research -->
+  <section id="research" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-academic-blue mb-4">Research</h2>
+      <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+        <div class="text-academic-gold mb-4"><i data-feather="book" class="w-12 h-12"></i></div>
+        <h3 class="text-xl font-semibold text-academic-blue mb-4">Dissertation</h3>
+        <p class="text-gray-600 mb-2"><span class="font-medium">Working Theme:</span> LLM-assisted IR and Accessibility</p>
+        <p class="text-gray-600">
+          Controllable generation and RAG pipelines that meet user-centric constraints (e.g., readability) while preserving factuality and ranking quality.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-academic-gold mb-4"><i data-feather="bar-chart-2" class="w-12 h-12"></i></div>
+        <h3 class="text-xl font-semibold text-academic-blue mb-4">Current Projects</h3>
+        <div class="space-y-4">
+          <div>
+            <h4 class="font-medium text-academic-blue">Readability-Aware LLMs for Health QA</h4>
+            <p class="text-gray-600 text-sm">Do model outputs meet AMA/NIH readability targets? Prompt strategies for neurodivergent-friendly text.</p>
+          </div>
+          <div>
+            <h4 class="font-medium text-academic-blue">Iterative Query Rewriting with LLMs</h4>
+            <p class="text-gray-600 text-sm">Multi-stage retrieval + LLM reformulation with BERT-based reranking to improve nDCG@10.</p>
+          </div>
+          <div>
+            <h4 class="font-medium text-academic-blue">Persona-Adaptive Search / RAG</h4>
+            <p class="text-gray-600 text-sm">Personalized conversational search agents with retrieval-augmented generation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="text-academic-gold mb-4"><i data-feather="award" class="w-12 h-12"></i></div>
+        <h3 class="text-xl font-semibold text-academic-blue mb-4">Grants & Awards</h3>
+        <ul class="space-y-3 text-sm text-gray-700 list-disc list-inside">
+          <li>Fully Funded Ph.D. Package — Missouri S&T (2024)</li>
+          <li>Outstanding Performance Scholarship (GPA 5/5, two semesters) — MIPT (2023)</li>
+          <li>$1500 Prize — Games of the Future, Sports Programming (2024)</li>
+          <li>CIKM Sub-reviewer (2024)</li>
+          <li>Russian Government Scholarship — MIPT (2019)</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+        <div class="text-academic-gold mb-4"><i data-feather="users" class="w-12 h-12"></i></div>
+        <h3 class="text-xl font-semibold text-academic-blue mb-4">Experience & Collaborations</h3>
+        <ul class="space-y-3 text-sm text-gray-700 list-disc list-inside">
+          <li>Research Assistant — Missouri S&T (Aug 2024 – Present), Advisor: Dr. Shubham Chatterjee</li>
+          <li>Researcher — National University of Singapore (Jan 2024 – Apr 2024), Advisor: Dr. Andrey Ustyuzhanin</li>
+          <li>Software Engineer — Scaletorch.ai (Aug 2023 – Sep 2023)</li>
+          <li>Research Student — MIPT (Oct 2022 – Jun 2023), Advisor: Dr. Alexey Salnikov</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white rounded-xl shadow-md section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-academic-blue mb-4">Publications</h2>
+      <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
+    </div>
+
+    <div class="mb-8">
+      <h3 class="text-2xl font-semibold text-academic-blue mb-6">Journal Articles</h3>
+      <div class="space-y-6">
+        <div class="publication-card p-6 border border-gray-200 rounded-lg transition duration-300 hover:shadow-lg" data-aos="fade-up">
+          <div class="flex justify-between items-start">
+            <div>
+              <h4 class="font-medium text-lg text-academic-blue">Strain-induced crumpling of graphene oxide lamellas to achieve fast and selective transport of H₂ and CO₂ for efficient decarbonization</h4>
+              <p class="text-gray-600 mb-2">A. David et&nbsp;al., <span class="italic">Nature Nanotechnology</span>, 2025</p>
+              <div class="flex flex-wrap gap-3 mt-2">
+                <a href="https://www.nature.com/" target="_blank" rel="noopener" class="text-sm text-academic-gold hover:underline">Publisher</a>
+              </div>
+            </div>
+            <span class="px-3 py-1 bg-academic-blue text-white rounded-full text-xs shadow-sm">Published</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h3 class="text-2xl font-semibold text-academic-blue mb-6">Preprints & Working Papers</h3>
+      <div class="space-y-6">
+        <div class="publication-card p-6 border border-gray-200 rounded-lg transition duration-300 hover:shadow-lg" data-aos="fade-up">
+          <div class="flex justify-between items-start">
+            <div>
+              <h4 class="font-medium text-lg text-academic-blue">Readability-Aware LLMs: Accessibility Benchmarks in Health QA</h4>
+              <p class="text-gray-600 mb-2">Working paper</p>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="text-sm text-gray-500">Draft in progress</span>
+              </div>
+            </div>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs shadow-sm">In progress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="https://scholar.google.com/citations?user=MafxQ7kAAAAJ&hl=en" target="_blank" rel="noopener" class="px-6 py-3 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition inline-flex items-center">
+        <i data-feather="external-link" class="mr-2"></i> View Full Publication List (Google Scholar)
+      </a>
+    </div>
+  </section>
+
+  <!-- Teaching -->
+  <section id="teaching" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-academic-blue mb-4">Teaching</h2>
+      <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+        <h3 class="text-2xl font-semibold text-academic-blue mb-6">Instructor</h3>
+        <p class="text-gray-600 text-sm">—</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-semibold text-academic-blue mb-6">Teaching Assistant</h3>
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-medium text-lg text-academic-blue">C++ (TA)</h4>
+            <p class="text-gray-600 mb-2">Mar 2022 – May 2023, Moscow Institute of Physics and Technology</p>
+            <p class="text-gray-600 text-sm">Prepared assignments, graded code (Google C++ style), and supported student learning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+      <h3 class="text-2xl font-semibold text-academic-blue mb-6">Teaching Philosophy</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-4 bg-academic-light rounded-lg">
+          <div class="text-academic-gold mb-2"><i data-feather="book-open" class="w-8 h-8"></i></div>
+          <h4 class="font-medium text-academic-blue mb-2">Engagement</h4>
+          <p class="text-gray-600 text-sm">Active, example-driven sessions and iterative feedback.</p>
+        </div>
+        <div class="p-4 bg-academic-light rounded-lg">
+          <div class="text-academic-gold mb-2"><i data-feather="help-circle" class="w-8 h-8"></i></div>
+          <h4 class="font-medium text-academic-blue mb-2">Critical Thinking</h4>
+          <p class="text-gray-600 text-sm">Emphasis on problem decomposition and evaluative reasoning.</p>
+        </div>
+        <div class="p-4 bg-academic-light rounded-lg">
+          <div class="text-academic-gold mb-2"><i data-feather="trending-up" class="w-8 h-8"></i></div>
+          <h4 class="font-medium text-academic-blue mb-2">Application</h4>
+          <p class="text-gray-600 text-sm">Real-world datasets, reproducible experiments, open-source tooling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white rounded-xl shadow-md section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-academic-blue mb-4">Contact</h2>
+      <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-12">
+      <div class="md:w-1/2" data-aos="fade-right">
+        <h3 class="text-2xl font-semibold text-academic-blue mb-6">Get in Touch</h3>
+        <p class="text-gray-600 mb-8">
+          Open to research collaborations, academic service, and conversations about LLMs, IR, and AI for Good.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="text-academic-gold mr-4 mt-1"><i data-feather="mail"></i></div>
+            <div>
+              <h4 class="font-medium text-academic-blue">Email</h4>
+              <a href="mailto:davidashishx@gmail.com" class="text-gray-600 hover:text-academic-gold transition">davidashishx@gmail.com</a>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="text-academic-gold mr-4 mt-1"><i data-feather="map-pin"></i></div>
+            <div>
+              <h4 class="font-medium text-academic-blue">Location</h4>
+              <p class="text-gray-600">Missouri S&T · Rolla, Missouri, USA</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <h4 class="font-medium text-academic-blue mb-4">Connect</h4>
+          <div class="flex space-x-4">
+            <a href="https://github.com/ashishdavid" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition" aria-label="GitHub"><i data-feather="github"></i></a>
+            <a href="https://www.linkedin.com/in/ashish-david/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=MafxQ7kAAAAJ&hl=en" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition" aria-label="Google Scholar"><i data-feather="book"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:w-1/2" data-aos="fade-left">
+        <h3 class="text-2xl font-semibold text-academic-blue mb-6">Send a Message</h3>
+        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thanks! This demo form does not send email yet.');">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <input id="name" name="name" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue">
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <input id="email" name="email" type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue">
+          </div>
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+            <input id="subject" name="subject" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue">
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue"></textarea>
+          </div>
+          <div>
+            <button type="submit" class="px-6 py-3 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition w-full">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-academic-blue text-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h3 class="text-xl font-bold">Ashish David</h3>
+          <p class="mt-2 text-academic-light">Ph.D. Researcher • AI/NLP & Information Retrieval</p>
+        </div>
+        <div class="flex flex-col items-center md:items-end">
+          <div class="flex space-x-6 mb-4">
+            <a href="https://github.com/ashishdavid" target="_blank" rel="noopener" class="text-academic-light hover:text-academic-gold transition" aria-label="GitHub"><i data-feather="github"></i></a>
+            <a href="https://www.linkedin.com/in/ashish-david/" target="_blank" rel="noopener" class="text-academic-light hover:text-academic-gold transition" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+            <a href="mailto:davidashishx@gmail.com" class="text-academic-light hover:text-academic-gold transition" aria-label="Email"><i data-feather="mail"></i></a>
+            <a href="https://scholar.google.com/citations?user=MafxQ7kAAAAJ&hl=en" target="_blank" rel="noopener" class="text-academic-light hover:text-academic-gold transition" aria-label="Google Scholar"><i data-feather="book"></i></a>
+          </div>
+          <p class="text-sm text-academic-light text-center md:text-right">
+            © <span id="year"></span> Ashish David. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // AOS animations
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    // Vanta background
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x1a365d,
+      backgroundColor: 0xf7fafc,
+      points: 12.00,
+      maxDistance: 22.00,
+      spacing: 18.00
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.innerHTML = mobileMenu.classList.contains('hidden')
+        ? feather.icons['menu'].toSvg()
+        : feather.icons['x'].toSvg();
+    });
+
+    // Year + feather icons
+    document.getElementById('year').textContent = new Date().getFullYear();
+    feather.replace();
+  </script>
 </body>
 </html>
