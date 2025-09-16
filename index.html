@@ -7,17 +7,17 @@
   <meta name="description" content="AI/NLP Researcher & Ph.D. Candidate at Missouri S&T. Large Language Models, Information Retrieval, and Human-Centered AI." />
   <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
 
-  <!-- Preload hero image (new headshot, relative path) -->
-  <link rel="preload" as="image" href="static/ashish-david-headshot2-800.webp" imagesrcset="static/ashish-david-headshot2-800.webp" />
+  <!-- Preload a reasonable hero size -->
+  <link rel="preload" as="image" href="static/ashish-david-headshot-rect-800.webp?v=4" imagesrcset="static/ashish-david-headshot-rect-800.webp?v=4" />
 
-  <!-- OpenGraph/Twitter (relative so it works on subpaths too) -->
+  <!-- OpenGraph/Twitter -->
   <meta property="og:title" content="Ashish David - AI/NLP Researcher" />
   <meta property="og:description" content="Ph.D. Candidate at Missouri S&T working on LLMs, IR, and Human-Centered AI." />
-  <meta property="og:image" content="static/ashish-david-headshot2-800.jpg" />
+  <meta property="og:image" content="static/ashish-david-headshot-rect-1600.jpg?v=4" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ashish David - AI/NLP Researcher" />
   <meta name="twitter:description" content="LLMs • IR • Accessibility" />
-  <meta name="twitter:image" content="static/ashish-david-headshot2-800.jpg" />
+  <meta name="twitter:image" content="static/ashish-david-headshot-rect-1600.jpg?v=4" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -73,10 +73,15 @@
       background-clip: text;
       color: transparent;
     }
+    .toast {
+      position: fixed; bottom: 16px; right: 16px;
+      background: #1a365d; color: white; padding: 12px 14px;
+      border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,.2);
+      z-index: 1000; display:none;
+    }
   </style>
 </head>
 <body class="bg-academic-light font-sans text-academic-dark">
-  <!-- Background Animation -->
   <div id="vanta-bg" class="vanta-bg"></div>
 
   <!-- Navigation -->
@@ -101,7 +106,6 @@
         </div>
       </div>
     </div>
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
       <div class="flex flex-col space-y-4">
         <a href="#about" class="text-academic-blue hover:text-academic-gold transition">About</a>
@@ -138,17 +142,36 @@
         </div>
       </div>
 
-      <!-- RECTANGULAR PHOTO (no crop) -->
+      <!-- RECTANGULAR PHOTO (no crop, original aspect ratio) -->
       <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
         <div class="relative">
-          <div class="max-w-md border-4 border-academic-gold shadow-xl rounded-xl overflow-hidden floating">
+          <div class="max-w-md border-4 border-academic-gold shadow-xl rounded-xl floating">
             <picture>
-              <source srcset="static/ashish-david-headshot2-800.webp" type="image/webp" />
+              <source
+                type="image/webp"
+                srcset="
+                  static/ashish-david-headshot-rect-1600.webp?v=4 1600w,
+                  static/ashish-david-headshot-rect-800.webp?v=4 800w"
+                sizes="(min-width: 768px) 640px, 100vw" />
               <img
-                src="static/ashish-david-headshot2-800.jpg"
+                id="hero-photo"
+                src="static/ashish-david-headshot-rect-800.jpg?v=4"
+                srcset="
+                  static/ashish-david-headshot-rect-1600.jpg?v=4 1600w,
+                  static/ashish-david-headshot-rect-800.jpg?v=4 800w"
+                sizes="(min-width: 768px) 640px, 100vw"
                 alt="Ashish David"
                 class="w-full h-auto block"
                 loading="eager"
+                onerror="(function(img){
+                  const tried = img.getAttribute('data-tried')||'';
+                  if (!tried.includes('backup')) {
+                    img.setAttribute('data-tried', tried+' backup');
+                    img.src = 'static/ashish-david-headshot2-800.jpg?v=4';
+                    return;
+                  }
+                  img.src='https://via.placeholder.com/1200x800?text=Headshot+not+found';
+                })(this)"
               />
             </picture>
           </div>
@@ -179,7 +202,7 @@
             </div>
             <div>
               <h4 class="font-medium">B.S. in Applied Mathematics & Computer Science</h4>
-              <p class="text-gray-600">Moscow Institute of Physics and Technology · Oct 2019 – Jul 2023</p>
+              <p class="text-gray-600">MIPT (Moscow Institute of Physics and Technology) · Oct 2019 – Jul 2023</p>
               <p class="text-sm mt-1">Russian Government Scholarship (merit-based)</p>
               <p class="text-sm text-gray-600 mt-1">Thesis: Optimizing MPI benchmarking app I/O with parallel NetCDF</p>
             </div>
@@ -330,8 +353,8 @@
         <h3 class="text-xl font-semibold text-academic-blue">Research Software Engineer (Sir Konstantin Novoselov Group)</h3>
         <p class="text-gray-600">National University of Singapore · Jan 2023 – May 2023 · Advisor: Dr. Andrey Ustyuzhanin</p>
         <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
-          <li>Developed a Python app to compute gas diffusion coefficients during mixed-gas diffusion with < 0.133% error via linear regression.</li>
-          <li>Automated data extraction/manipulation from Excel (pyopenxl); added config support; reduced runtime by &gt;100%.</li>
+          <li>Developed a Python app to compute gas diffusion coefficients during mixed-gas diffusion with &lt;0.133% error via linear regression.</li>
+          <li>Automated data extraction/manipulation from Excel; added config support; reduced runtime by &gt;100%.</li>
         </ul>
       </div>
     </div>
@@ -356,10 +379,10 @@
 
       <div class="bg-white p-8 rounded-xl shadow-md">
         <h3 class="text-xl font-semibold text-academic-blue">AI-Powered Telegram Bot</h3>
-        <p class="text-gray-600 text-sm mb-3">Python · Telegram Bot API · NLP/ML</p>
+        <p class="text-gray-600 text-sm mb-3">Python · Prompt Engineering · OpenAI API · PostgreSQL · Aiogram</p>
         <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Built a production-ready bot integrating NLP pipelines for intent handling and smart responses.</li>
-          <li>Added logging, command routing, and lightweight persistence for reliable user interactions.</li>
+          <li>Built a production-ready bot integrating NLP pipelines for intent handling and smart responses in group chats.</li>
+          <li>Stored/analyzed message history in Postgres; added retrieval of conversation context on demand.</li>
         </ul>
       </div>
 
@@ -368,7 +391,7 @@
         <p class="text-gray-600 text-sm mb-3">Python · MPI · parallel NetCDF · HPC benchmarking</p>
         <ul class="list-disc list-inside text-gray-700 space-y-1">
           <li>Refactored an MPI benchmarking app to scale across clusters; integrated parallel NetCDF and memory balancing.</li>
-          <li>Removed I/O bottlenecks and improved throughput on Missouri S&amp;T’s supercomputing environment.</li>
+          <li>Eliminated I/O bottlenecks and improved throughput on Missouri S&amp;T’s supercomputing environment.</li>
         </ul>
       </div>
     </div>
@@ -407,9 +430,7 @@
             <div>
               <h4 class="font-medium text-lg text-academic-blue">Readability-Aware LLMs: Accessibility Benchmarks in Health QA</h4>
               <p class="text-gray-600 mb-2">Working paper</p>
-              <div class="flex flex-wrap gap-2 mt-2">
-                <span class="text-sm text-gray-500">Draft in progress</span>
-              </div>
+              <div class="flex flex-wrap gap-2 mt-2"><span class="text-sm text-gray-500">Draft in progress</span></div>
             </div>
             <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs shadow-sm">In progress</span>
           </div>
@@ -453,8 +474,8 @@
           </div>
           <div>
             <h4 class="font-medium text-lg text-academic-blue">C++ (TA)</h4>
-            <p class="text-gray-600 mb-2">Mar 2022 – May 2023, Moscow Institute of Physics and Technology</p>
-            <p class="text-gray-600 text-sm">Prepared assignments, graded code (Google C++ style), and supported student learning.</p>
+            <p class="text-gray-600 mb-2">Mar 2022 – May 2023, MIPT</p>
+            <p class="text-gray-600 text-sm">Prepared assignments, graded code, and supported student learning.</p>
           </div>
         </div>
       </div>
@@ -492,9 +513,7 @@
     <div class="flex flex-col md:flex-row gap-12">
       <div class="md:w-1/2" data-aos="fade-right">
         <h3 class="text-2xl font-semibold text-academic-blue mb-6">Get in Touch</h3>
-        <p class="text-gray-600 mb-8">
-          Open to research collaborations, academic service, and conversations about LLMs, IR, and AI for Good.
-        </p>
+        <p class="text-gray-600 mb-8">Open to research collaborations, academic service, and conversations about LLMs, IR, and AI for Good.</p>
 
         <div class="space-y-6">
           <div class="flex items-start">
@@ -516,97 +535,4 @@
         <div class="mt-8">
           <h4 class="font-medium text-academic-blue mb-4">Connect</h4>
           <div class="flex space-x-4">
-            <a href="https://github.com/ashishdavid" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition" aria-label="GitHub"><i data-feather="github"></i></a>
-            <a href="https://www.linkedin.com/in/ashish-david/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
-            <a href="https://scholar.google.com/citations?user=MafxQ7kAAAAJ&hl=en" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue hover:bg-academic-blue hover:text-white transition" aria-label="Google Scholar"><i data-feather="book"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="md:w-1/2" data-aos="fade-left">
-        <h3 class="text-2xl font-semibold text-academic-blue mb-6">Send a Message</h3>
-        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thanks! This demo form does not send email yet.');">
-          <div>
-            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-            <input id="name" name="name" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue">
-          </div>
-          <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-            <input id="email" name="email" type="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue">
-          </div>
-          <div>
-            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-            <input id="subject" name="subject" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue">
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-academic-blue focus:border-academic-blue"></textarea>
-          </div>
-          <div>
-            <button type="submit" class="px-6 py-3 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition w-full">Send Message</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-academic-blue text-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-6 md:mb-0">
-          <h3 class="text-xl font-bold">Ashish David</h3>
-          <p class="mt-2 text-academic-light">Ph.D. Researcher • AI/NLP & Information Retrieval</p>
-        </div>
-        <div class="flex flex-col items-center md:items-end">
-          <div class="flex space-x-6 mb-4">
-            <a href="https://github.com/ashishdavid" target="_blank" rel="noopener" class="text-academic-light hover:text-academic-gold transition" aria-label="GitHub"><i data-feather="github"></i></a>
-            <a href="https://www.linkedin.com/in/ashish-david/" target="_blank" rel="noopener" class="text-academic-light hover:text-academic-gold transition" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
-            <a href="mailto:davidashishx@gmail.com" class="text-academic-light hover:text-academic-gold transition" aria-label="Email"><i data-feather="mail"></i></a>
-            <a href="https://scholar.google.com/citations?user=MafxQ7kAAAAJ&hl=en" target="_blank" rel="noopener" class="text-academic-light hover:text-academic-gold transition" aria-label="Google Scholar"><i data-feather="book"></i></a>
-          </div>
-          <p class="text-sm text-academic-light text-center md:text-right">
-            © <span id="year"></span> Ashish David. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // AOS animations
-    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
-
-    // Vanta background
-    VANTA.NET({
-      el: "#vanta-bg",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x1a365d,
-      backgroundColor: 0xf7fafc,
-      points: 12.00,
-      maxDistance: 22.00,
-      spacing: 18.00
-    });
-
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', function () {
-      mobileMenu.classList.toggle('hidden');
-      menuBtn.innerHTML = mobileMenu.classList.contains('hidden')
-        ? feather.icons['menu'].toSvg()
-        : feather.icons['x'].toSvg();
-    });
-
-    // Year + feather icons
-    document.getElementById('year').textContent = new Date().getFullYear();
-    feather.replace();
-  </script>
-</body>
-</html>
+            <a href="https://github.com/ashishdavid" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-academic-light flex items-center justify-center text-academic-blue
