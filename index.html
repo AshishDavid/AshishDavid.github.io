@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Ashish David - AI/NLP Researcher</title>
   <meta name="description" content="AI/NLP Researcher & Ph.D. Candidate at Missouri S&T. Large Language Models, Information Retrieval, and Human-Centered AI." />
-  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
 
-  <!-- Preload hero image (new headshot) -->
-  <link rel="preload" as="image" href="/static/ashish-david-headshot2-800.webp" imagesrcset="/static/ashish-david-headshot2-800.webp" />
+  <!-- Preload hero image (new headshot, relative path) -->
+  <link rel="preload" as="image" href="static/ashish-david-headshot2-800.webp" imagesrcset="static/ashish-david-headshot2-800.webp" />
 
-  <!-- OpenGraph/Twitter -->
+  <!-- OpenGraph/Twitter (relative so it works on subpaths too) -->
   <meta property="og:title" content="Ashish David - AI/NLP Researcher" />
   <meta property="og:description" content="Ph.D. Candidate at Missouri S&T working on LLMs, IR, and Human-Centered AI." />
-  <meta property="og:image" content="/static/ashish-david-headshot2-800.jpg" />
+  <meta property="og:image" content="static/ashish-david-headshot2-800.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Ashish David - AI/NLP Researcher" />
   <meta name="twitter:description" content="LLMs • IR • Accessibility" />
-  <meta name="twitter:image" content="/static/ashish-david-headshot2-800.jpg" />
+  <meta name="twitter:image" content="static/ashish-david-headshot2-800.jpg" />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -89,10 +89,12 @@
         <div class="hidden md:flex items-center space-x-8">
           <a href="#about" class="text-academic-blue hover:text-academic-gold transition">About</a>
           <a href="#research" class="text-academic-blue hover:text-academic-gold transition">Research</a>
+          <a href="#experience" class="text-academic-blue hover:text-academic-gold transition">Experience</a>
+          <a href="#projects" class="text-academic-blue hover:text-academic-gold transition">Projects</a>
           <a href="#publications" class="text-academic-blue hover:text-academic-gold transition">Publications</a>
           <a href="#teaching" class="text-academic-blue hover:text-academic-gold transition">Teaching</a>
           <a href="#contact" class="text-academic-blue hover:text-academic-gold transition">Contact</a>
-          <a href="/cv.pdf" download class="px-4 py-2 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition">Download CV</a>
+          <a href="cv.pdf" download class="px-4 py-2 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition">Download CV</a>
         </div>
         <div class="md:hidden flex items-center">
           <button id="menu-btn" class="text-academic-blue" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
@@ -104,10 +106,12 @@
       <div class="flex flex-col space-y-4">
         <a href="#about" class="text-academic-blue hover:text-academic-gold transition">About</a>
         <a href="#research" class="text-academic-blue hover:text-academic-gold transition">Research</a>
+        <a href="#experience" class="text-academic-blue hover:text-academic-gold transition">Experience</a>
+        <a href="#projects" class="text-academic-blue hover:text-academic-gold transition">Projects</a>
         <a href="#publications" class="text-academic-blue hover:text-academic-gold transition">Publications</a>
         <a href="#teaching" class="text-academic-blue hover:text-academic-gold transition">Teaching</a>
         <a href="#contact" class="text-academic-blue hover:text-academic-gold transition">Contact</a>
-        <a href="/cv.pdf" download class="px-4 py-2 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition text-center">Download CV</a>
+        <a href="cv.pdf" download class="px-4 py-2 bg-academic-blue text-white rounded-md hover:bg-academic-gold transition text-center">Download CV</a>
       </div>
     </div>
   </nav>
@@ -134,12 +138,18 @@
         </div>
       </div>
 
+      <!-- RECTANGULAR PHOTO (no crop) -->
       <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
         <div class="relative">
-          <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-academic-gold shadow-xl floating">
+          <div class="max-w-md border-4 border-academic-gold shadow-xl rounded-xl overflow-hidden floating">
             <picture>
-              <source srcset="/static/ashish-david-headshot2-800.webp" type="image/webp" />
-              <img src="/static/ashish-david-headshot2-800.jpg" alt="Ashish David" width="800" height="800" loading="eager" class="w-full h-full object-cover" />
+              <source srcset="static/ashish-david-headshot2-800.webp" type="image/webp" />
+              <img
+                src="static/ashish-david-headshot2-800.jpg"
+                alt="Ashish David"
+                class="w-full h-auto block"
+                loading="eager"
+              />
             </picture>
           </div>
           <div class="absolute -bottom-4 -right-4 bg-academic-blue text-white px-4 py-2 rounded-md shadow-lg">
@@ -269,27 +279,96 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="200">
-        <div class="text-academic-gold mb-4"><i data-feather="award" class="w-12 h-12"></i></div>
-        <h3 class="text-xl font-semibold text-academic-blue mb-4">Grants & Awards</h3>
-        <ul class="space-y-3 text-sm text-gray-700 list-disc list-inside">
-          <li>Fully Funded Ph.D. Package — Missouri S&T (2024)</li>
-          <li>Outstanding Performance Scholarship (GPA 5/5, two semesters) — MIPT (2023)</li>
-          <li>$1500 Prize — Games of the Future, Sports Programming (2024)</li>
-          <li>CIKM Sub-reviewer (2024)</li>
-          <li>Russian Government Scholarship — MIPT (2019)</li>
+  <!-- Experience -->
+  <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-white rounded-xl shadow-md section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-academic-blue mb-4">Experience</h2>
+      <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
+    </div>
+
+    <div class="space-y-8">
+      <div class="p-6 rounded-lg border border-gray-200">
+        <h3 class="text-xl font-semibold text-academic-blue">Research Assistant</h3>
+        <p class="text-gray-600">Missouri University of Science and Technology · Aug 2024 – Present · Advisor: Dr. Shubham Chatterjee</p>
+        <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+          <li>Interdisciplinary work spanning information retrieval, NLP, and LLMs to explore innovative user–system interactions.</li>
+          <li>Designed and evaluated LLM-driven query rewriting pipelines; integrated BERT-based neural reranking to improve retrieval effectiveness.</li>
         </ul>
       </div>
 
-      <div class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
-        <div class="text-academic-gold mb-4"><i data-feather="users" class="w-12 h-12"></i></div>
-        <h3 class="text-xl font-semibold text-academic-blue mb-4">Experience & Collaborations</h3>
-        <ul class="space-y-3 text-sm text-gray-700 list-disc list-inside">
-          <li>Research Assistant — Missouri S&T (Aug 2024 – Present), Advisor: Dr. Shubham Chatterjee</li>
-          <li>Researcher — National University of Singapore (Jan 2024 – Apr 2024), Advisor: Dr. Andrey Ustyuzhanin</li>
-          <li>Software Engineer — Scaletorch.ai (Aug 2023 – Sep 2023)</li>
-          <li>Research Student — MIPT (Oct 2022 – Jun 2023), Advisor: Dr. Alexey Salnikov</li>
+      <div class="p-6 rounded-lg border border-gray-200">
+        <h3 class="text-xl font-semibold text-academic-blue">Researcher</h3>
+        <p class="text-gray-600">National University of Singapore · Jan 2024 – Apr 2024 · Advisor: Dr. Andrey Ustyuzhanin</p>
+        <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+          <li>Built multiple LLM pipelines: baseline, RAG, and ontology-integrated architectures to enhance contextual reasoning.</li>
+          <li>Ran human-in-the-loop evaluations to benchmark and iteratively refine model outputs.</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-lg border border-gray-200">
+        <h3 class="text-xl font-semibold text-academic-blue">Software Engineer</h3>
+        <p class="text-gray-600">Scaletorch.ai · Aug 2023 – Sep 2023</p>
+        <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+          <li>Implemented distributed deep learning training features and maintained AWS server instances.</li>
+          <li>Shipped new product features, wrote tests, and fixed production issues.</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-lg border border-gray-200">
+        <h3 class="text-xl font-semibold text-academic-blue">Research Student</h3>
+        <p class="text-gray-600">Moscow Institute of Physics and Technology · Oct 2022 – Jun 2023 · Advisor: Dr. Alexey Salnikov</p>
+        <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+          <li>Improved an MPI-based benchmarking application by distributing I/O using parallel NetCDF across all cluster processors.</li>
+          <li>Balanced memory across processes; added Makefile checks for dependency availability.</li>
+        </ul>
+      </div>
+
+      <div class="p-6 rounded-lg border border-gray-200">
+        <h3 class="text-xl font-semibold text-academic-blue">Research Software Engineer (Sir Konstantin Novoselov Group)</h3>
+        <p class="text-gray-600">National University of Singapore · Jan 2023 – May 2023 · Advisor: Dr. Andrey Ustyuzhanin</p>
+        <ul class="list-disc list-inside text-gray-700 mt-3 space-y-1">
+          <li>Developed a Python app to compute gas diffusion coefficients during mixed-gas diffusion with < 0.133% error via linear regression.</li>
+          <li>Automated data extraction/manipulation from Excel (pyopenxl); added config support; reduced runtime by &gt;100%.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto section">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-academic-blue mb-4">Projects</h2>
+      <div class="w-20 h-1 bg-academic-gold mx-auto"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-8 rounded-xl shadow-md">
+        <h3 class="text-xl font-semibold text-academic-blue">Iterative Query Rewriting for IR using LLMs</h3>
+        <p class="text-gray-600 text-sm mb-3">Python · LLM (Mistral-8B-Instruct) · BERT-based neural ranker · TREC Robust04 · IR metrics</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Combined a BERT-based reranker with an LLM to iteratively refine queries and improve retrieval quality.</li>
+          <li>Implemented multi-stage retrieval with feedback-driven rewriting; evaluated with nDCG@10 on TREC Robust04.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-md">
+        <h3 class="text-xl font-semibold text-academic-blue">AI-Powered Telegram Bot</h3>
+        <p class="text-gray-600 text-sm mb-3">Python · Telegram Bot API · NLP/ML</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Built a production-ready bot integrating NLP pipelines for intent handling and smart responses.</li>
+          <li>Added logging, command routing, and lightweight persistence for reliable user interactions.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-md md:col-span-2">
+        <h3 class="text-xl font-semibold text-academic-blue">High-Performance Computing Benchmark Suite</h3>
+        <p class="text-gray-600 text-sm mb-3">Python · MPI · parallel NetCDF · HPC benchmarking</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Refactored an MPI benchmarking app to scale across clusters; integrated parallel NetCDF and memory balancing.</li>
+          <li>Removed I/O bottlenecks and improved throughput on Missouri S&amp;T’s supercomputing environment.</li>
         </ul>
       </div>
     </div>
