@@ -361,18 +361,23 @@
 
     <div class="grid md:grid-cols-2 gap-8">
       <div class="bg-white p-8 rounded-xl shadow-md">
-        <h3 class="text-xl font-semibold text-academic-blue">Iterative Query Rewriting for IR using LLMs</h3>
+        <h3 class="text-xl font-semibold text-academic-blue">Iterative Query Rewriting Pipeline with LLMs and BERT Reranker</h3>
         <p class="text-gray-600 text-sm mb-3">Python · LLM (Mistral-8B-Instruct) · BERT reranker · TREC Robust04</p>
         <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>LLM + BERT reranker loop to improve retrieval; evaluated with nDCG@10.</li>
+          <li>Developed an iterative query rewriting pipeline that integrates Mistral-8B-Instruct with a BERT reranker to dynamically reformulate queries and improve retrieval relevance.</li>
+          <li>Implemented a closed-loop framework that refines queries based on reranking feedback, clarifying ambiguities and enhancing ranking quality.</li>
+          <li>Evaluated the pipeline on TREC Robust04, achieving measurable gains in nDCG@10 over baseline retrieval methods and identifying optimal iteration counts for maximum performance.</li>
         </ul>
       </div>
 
       <div class="bg-white p-8 rounded-xl shadow-md">
-        <h3 class="text-xl font-semibold text-academic-blue">AI-Powered Telegram Bot</h3>
+        <h3 class="text-xl font-semibold text-academic-blue">AI-Powered Telegram Bot for Automated Group Interaction</h3>
         <p class="text-gray-600 text-sm mb-3">Python · Prompt Engineering · OpenAI API · PostgreSQL · Aiogram</p>
         <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Production bot integrating NLP pipelines; context retrieval; logging & routing.</li>
+          <li>Developed a production-ready AI Telegram bot capable of detecting when an AI response is required in group conversations, reducing noise and improving relevance in project discussions.</li>
+          <li>Designed for commercial deployment to accelerate project-related communication and provide rapid, high-accuracy answers in real time.</li>
+          <li>Integrated the OpenAI API with ChatGPT-3.5-Turbo, enabling the bot to analyze and respond intelligently based on stored group context in PostgreSQL.</li>
+          <li>Implemented advanced message-history management, allowing the bot to retrieve, reference, and utilize previous conversations on demand for more contextual and accurate responses.</li>
         </ul>
       </div>
 
@@ -380,7 +385,8 @@
         <h3 class="text-xl font-semibold text-academic-blue">High-Performance Computing Benchmark Suite</h3>
         <p class="text-gray-600 text-sm mb-3">Python · MPI · parallel NetCDF</p>
         <ul class="list-disc list-inside text-gray-700 space-y-1">
-          <li>Refactored MPI benchmarking app; parallel I/O; memory balancing; throughput boosts.</li>
+          <li>Refactored an MPI‑based benchmarking application to scale seamlessly across HPC clusters, integrating parallel NetCDF and memory balancing.</li>
+          <li>Eliminated file I/O bottlenecks and improved throughput on Missouri S&T’s supercomputing environment.</li>
         </ul>
       </div>
     </div>
